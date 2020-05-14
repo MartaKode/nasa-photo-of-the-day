@@ -63,11 +63,12 @@ const reset = event => {
             <div className='title' style={makeStyles().whiteText}>{props.title}</div>
             <div className='date' style={{color:'white', backgroundImage: `url(${stars})`}}>{props.date}</div>
             <img src={props.url} className="nasaImg" alt={props.title} onMouseOver={resize}/>
+            <div className='buttons'>
             <Button onClick={rotate}> Rotate </Button>
             <Button onClick={enlargeImg} > + </Button>
             <Button onClick={smallerImg} > - </Button>
             <Button onClick={reset} > reset </Button>
-
+            </div>
             <div style={{color:'white'}}>{props.explanation}</div>
             {/* <Explanation explanation={props.explanation}/> */}
 
