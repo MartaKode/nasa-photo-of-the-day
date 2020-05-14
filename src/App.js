@@ -25,7 +25,7 @@ useEffect( () => {
 
   })
 
-  .catch(err => {
+  .catch(error => {
 
     console.log('error encountered');
 
@@ -48,7 +48,7 @@ useEffect( () => {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
 
-      <Post title = {nasaData.title} date = {nasaData.date} url = {nasaData.url} />
+      <Post title = {nasaData.title} date = {nasaData.date} url = {nasaData.url} explanation={nasaData.explanation}/>
     </div>
   );
 }
