@@ -1,16 +1,30 @@
 import React from "react";
+import styled from 'styled-components'
+
+const HeaderStyled = styled.div`
+background-color: papayawhip;
+color: ${props => props.title ? 'blue' : 'red'};
+
+`
+
+const TitleH3 = styled.h3`
+color: ${props => props.title ? 'red' : 'blue'};
+
+`
+
 
 export default function Header(props){
 
 	return(
 
-		<div className="postHeader">
+		<HeaderStyled>
 
-			<h3 className="postTitle">{props.title}</h3>
+			<TitleH3>{props.title}</TitleH3>
 
 			<p className = "postDate">{props.date}</p>
+			
 
-		</div>
+		</HeaderStyled>
 
 		)
 }
